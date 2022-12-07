@@ -79,7 +79,7 @@ export function bountyCalculator(entries, valuePerBuyIn) {
       remainingBounties.forEach((bounty, index) => {
         let player = selectRandomPlayer(remainingPlayers);
         if (player[1] > 0) {
-          console.log(`${player[0]} wins a mystery bounty of... ${bounty.toFixed(2)} ! \n`);
+          console.log(`${player[0]} wins a mystery bounty of... £ ${bounty.toFixed(2)} ! \n`);
           remainingBounties.splice(index, 1);
           player[1] -= 1;
         } else {
