@@ -9,9 +9,9 @@ const revealBounty = async (bounties, player) => {
   console.log(`${bounty} ! \n\n`);
 
   if (bounty === 0.01) {
-    console.log("Unlucky, you got the TILT stick!")
+    console.log("Unlucky, you got the TILT stick! \n")
   } else {
-    console.log("Nice!")
+    console.log("Nice! \n")
   };
 };
 
@@ -37,17 +37,19 @@ const calculateBounties = (entry, players) => {
 
     if (remainingPlayers > 1 ) {
       remainingPlayers -= 1;
-      console.log(remainingPlayers)
       prizes.push(Number(value.toFixed(2)));
       total -= value;
     } else {
       prizes.push(Number(total.toFixed(2)));
     };
   };
+
+  console.log(`Here are the available prizes: \n\n ${prizes} \n`)
  
   return prizes;
 };
 
 const bountyPool = calculateBounties(5, 10);
 
-revealBounty(bountyPool, "Player Name");
+revealBounty(bountyPool, "Will Kassouf");
+
