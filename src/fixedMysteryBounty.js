@@ -44,12 +44,12 @@ const calculateBounties = (entry, players) => {
     };
   };
 
-  console.log(`Here are the available prizes: \n\n ${prizes} \n`)
+  console.log(`Here are the available prizes: \n\n${prizes.join(" \n")} \n`)
  
   return prizes;
 };
 
 const bountyPool = calculateBounties(5, 10);
 
-revealBounty(bountyPool, "Will Kassouf");
+revealBounty(bountyPool, "Quadzilla");
 
